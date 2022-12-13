@@ -7,9 +7,10 @@ export const useTheme = () => {
 
   useEffect(() => {
     async function fetchTheme() {
-      await setIsLoading(true);
-      await getTheme().then((data: any) => setThemeData(data));
-      await setIsLoading(false);
+      setIsLoading(true);
+      const data = await getTheme();
+      setThemeData(data);
+      setIsLoading(false);
     }
     fetchTheme();
   }, []);

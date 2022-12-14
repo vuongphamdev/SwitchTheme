@@ -1,4 +1,6 @@
-const fakeThemeData = [
+import { IThemeTypes } from '../App';
+
+const fakeThemeData: IThemeTypes[] = [
   {
     name: 'light',
     colors: {
@@ -90,7 +92,7 @@ const fakeThemeData = [
   },
 ];
 
-const getTheme = (): any => {
+const getTheme = (): IThemeTypes | any => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(fakeThemeData);

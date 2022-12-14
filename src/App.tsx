@@ -12,6 +12,7 @@ import { ThemeProvider } from 'styled-components';
 import { useTheme } from './hooks/useTheme';
 import { GridLoader } from 'react-spinners';
 
+// Declare theme object type
 export interface IThemeTypes {
   name: string;
   colors: {

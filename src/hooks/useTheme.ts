@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import getTheme from '../api/Theme';
 
 export const useTheme = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [themeData, setThemeData] = useState([]);
 
   useEffect(() => {
